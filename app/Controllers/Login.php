@@ -11,4 +11,28 @@ class Login extends BaseController
         ];
         return view('publico/login/iniciar-sesion', $data);
     }
+
+    public function login()
+    {
+
+    }
+
+    public function logout()
+    {
+
+    }
+
+    public function registrar()
+    {
+        $data = [
+            'titulo'    =>  'Registrar usuario nuevo'
+        ];
+        return view('publico/login/registrarse', $data);
+    }
+
+    public function crearRegistro()
+    {
+
+    }
+
 }
