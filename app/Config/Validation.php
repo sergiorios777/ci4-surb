@@ -41,4 +41,10 @@ class Validation extends BaseConfig
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
+    public $signup = [
+        'usuario'      => 'required|min_length[3]|max_length[20]|is_unique[tblusuario.usuario]',
+        'password'     => 'required|min_length[8]|max_length[14]',
+        'pass_confirm' => 'required|matches[password]',
+        'correo'       => 'required|valid_email|is_unique[tblusuario.correo]',
+    ];
 }

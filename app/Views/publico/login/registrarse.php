@@ -5,6 +5,6 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('contenido') ?>
-    <?= $titulo ?>
+    <?= $this->include('partials/_listaerrores') ?>
     <?= $this->include('partials/login/_form-nuevo') ?>
 <?= $this->endSection() ?>

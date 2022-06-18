@@ -8,6 +8,7 @@
 
     <h1><?= $titulo ?></h1>
     <p>Esta secci&oacute;n es el encabezado de la web.</p>
+    <?= $this->include('partials/_mensaje') ?>
 
 <?= $this->endSection() ?>
 
