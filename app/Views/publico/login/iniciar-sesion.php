@@ -1,4 +1,4 @@
-<?= $this->extend('templates/loginweb') ?>
+<?= $this->extend('layouts/loginweb') ?>
 
 <?= $this->section('titulo') ?>
     <?= $titulo ?>

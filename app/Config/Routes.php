@@ -39,7 +39,9 @@ $routes->get('/', 'Home::index');
 
 $routes->presenter('usuario');
 
-$routes->add('/iniciar-sesion', 'Login::index');
+$routes->add('/iniciar-sesion', 'Login::index', ['as' => 'login.ingresar']);
+$routes->add('/registrarse', 'Login::registrar', ['as' => 'login.registrar']);
+$routes->add('/cerrar-sesion', 'Login::logout', ['as' => 'login.logout']);
 
 /*
  * --------------------------------------------------------------------

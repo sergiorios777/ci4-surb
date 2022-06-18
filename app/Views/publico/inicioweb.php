@@ -1,4 +1,4 @@
-<?= $this->extend('templates/comunweb') ?>
+<?= $this->extend('layouts/comunweb') ?>
 
 <?= $this->section('titulo') ?>
     <?= $titulo ?>
