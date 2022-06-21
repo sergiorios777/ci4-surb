@@ -10,4 +10,14 @@ class UsuariosModel extends Model
     protected $primaryKey    = 'id';
 
     protected $allowedFields = ['usuario', 'correo', 'contrasena'];
+
+    public function encryptPassword($contrasenaPlana)
+    {
+        return password_hash($contrasenaPlana, PASSWORD_DEFAULT);
+    }
+
+    public function verifyPassword($contrasenaPlana, $contrasenaHash)
+    {
+        return password_verify($contrasenaPlana, $contrasenaHash);
+    } 
 }

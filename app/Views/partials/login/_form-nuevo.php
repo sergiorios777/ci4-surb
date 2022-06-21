@@ -1,4 +1,4 @@
-<form action="<?= base_url() ?>/usuario/create" method="post">
+<form action="<?= base_url() ?>/login/registrarse" method="post">
     <caption>Registrar usuario nuevo</caption>
     <fieldset>
         <legend>Informaci&oacute;n del usuario nuevo</legend>

@@ -19,5 +19,4 @@
         <li>Contenido principal de la p&aacute;gina.</li>
         <li>Tablas, formularios, imágenes u otros objetos.</li>
     </ul>
-
 <?= $this->endSection() ?>

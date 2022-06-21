@@ -1,4 +1,4 @@
-<form action="<?= base_url() ?>/login" method="post">
+<form action="<?= base_url() ?>/login/login" method="post">
     <fieldset>
         <legend>Credenciales del usuario</legend>
         <label for="identidad">Usuario o correo:<abbr title="requerido" aria-label="required">*</abbr></label>

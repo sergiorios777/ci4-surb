@@ -1,3 +1,5 @@
 <div>
-    <?= service('validation')->listErrors()  ?>
+    <?php if (session()->has('validation')): ?>
+    <?= session('validation')->listErrors() ?>
+    <?php endif; ?>
 </div>
