@@ -1,6 +1,6 @@
 <div>
     <?php
-    if (session('mensaje'))
+    if (session()->has('mensaje'))
     {
         echo session('mensaje');
     }

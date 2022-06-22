@@ -28,7 +28,7 @@ class Login extends BaseController
             $identidad = $this->request->getPost('identidad');
             $password  = $this->request->getPost('password');
 
-            $registro = $usuarios->select('id, usuario, correo, contrasena')
+            $registro = $usuarios->select('id, usuario, correo, contrasena, tipo')
                                  ->orWhere('usuario', $identidad)
                                  ->orWhere('correo', $identidad)
                                  ->first();
@@ -40,8 +40,9 @@ class Login extends BaseController
                 $session = session();
                 unset($registro['contrasena']);
                 $session->set($registro);
+                $session->set('isLoggedIn', true);
     
-                return redirect()->to(route_to('inicio.web'))->with('mensaje', 'Bienvenido ' . $registro['usuario']);    
+                return redirect()->to(route_to('panel.inicio'))->with('mensaje', 'Bienvenido ' . $registro['usuario']);    
             }
 
             return redirect()->back()->with('mensaje', '¡Contraseña equivocada!');
@@ -56,6 +57,7 @@ class Login extends BaseController
     {
         $session = session();
         $session->destroy();
+        $session->set('isLoggedIn', false);
 
         return redirect()->to(route_to('inicio.web'))->with('mensaje', 'Ha cerrado correctamente su sesión.');
     }

@@ -48,6 +48,11 @@ $routes->group('login', static function ($routes)
     $routes->get('logout', 'Login::logout', ['as' => 'login.logout']);
 });
 
+$routes->group('aplicacion', static function ($routes)
+{
+    $routes->get('/', 'Panel::index', ['as' => 'panel.inicio']);
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

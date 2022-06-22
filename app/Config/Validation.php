@@ -65,23 +65,23 @@ class Validation extends BaseConfig
     public $signup_errors = [
         'usuario'      => [
             'required'       => 'Es necesario escribir un nombre de usuario.',
-            'min_length[3]'  => 'Longitud m&iacute;nima de 3 caracteres.',
-            'max_length[20]' => 'Longitud m&aacute;xima de 20 caracteres', 
-            'is_unique[tblusuario.usuario]' => 'Usuario ya se encuentra registrado.',
-        ],
-        'password'     => [
-            'required'       => 'Es necesaria una contraseña.',
-            'min_length[8]'  => 'La longitud m&iacute;nima es de la contraseña es de 8 caracteres.',
-            'max_length[14]' => 'La longitud m&aacute;xima de la contraseña es de 14 caracteres.',
-        ],
-        'pass_confirm' => [
-            'required'          => 'Es encesario confirmar la contraseña.',
-            'matches[password]' => 'La contraseña no coincide.',
+            'min_length'  => 'Longitud m&iacute;nima de 3 caracteres.',
+            'max_length' => 'Longitud m&aacute;xima de 20 caracteres', 
+            'is_unique' => 'Usuario ya se encuentra registrado.',
         ],
         'correo'       => [
             'required'                    => 'Es necesario un correo.',
             'valid_email'                 => 'El correo debe ser v&aacute;lido. P.e. usuario@ejemplo.com',
-            'is_unique[tblusuario.correo]'=> 'El correo ingresado ya se encuentra registrado.',
+            'is_unique'=> 'El correo ingresado ya se encuentra registrado.',
+        ],
+        'password'     => [
+            'required'       => 'Es necesaria una contraseña.',
+            'min_length'  => 'La longitud m&iacute;nima es de la contraseña es de 8 caracteres.',
+            'max_length' => 'La longitud m&aacute;xima de la contraseña es de 14 caracteres.',
+        ],
+        'pass_confirm' => [
+            'required'          => 'Es encesario confirmar la contraseña.',
+            'matches' => 'La contraseña no coincide.',
         ],
     ];
 }
